@@ -1,0 +1,3 @@
+DROP INDEX idx_notification_history_report_id;
+DROP INDEX idx_notification_history_recipient_id;
+DROP TABLE notification_history;
