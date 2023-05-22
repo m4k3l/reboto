@@ -4,13 +4,19 @@ skinparam linetype ortho
 entity "app_user" {
     * **id: bigserial <<PK>>**
     * **org_unit_id: bigint <<FK>>**
+    * **role_id: bigint <<FK>>**
     ---
     * username: varchar
     * first_name: varchar
     * last_name: varchar
     * email_address: varchar
-    * is_instructor: bool
     signature: varchar
+}
+
+entity "role" {
+    * **id: bigserial <<PK>>**
+    ---
+    * name: varchar
 }
 
 entity "report_data" {
@@ -55,6 +61,7 @@ app_user }|--|| org_unit
 app_user }|--|| report_data
 app_user }|--|| report_comment
 app_user }|--|| notification_history
+app_user }|--|| role
 report_data }|--|| report_comment
 report_data }|--|| notification_history
 
