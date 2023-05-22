@@ -16,8 +16,8 @@ public class ReportCommentService {
 
     private final ReportCommentRepository repository;
 
-    public List<ReportComment> getAllCommentsForReport(ReportData reportData) {
-        return repository.findAllByCommentingUserId(reportData.getAuthor().getId());
+    public List<ReportComment> getAllCommentsForReport(Long reportId) {
+        return repository.findAllByCommentingUserId(reportId);
     }
 
     public void addNewComment(ReportComment reportComment) {

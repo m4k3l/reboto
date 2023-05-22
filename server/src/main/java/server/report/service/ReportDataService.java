@@ -6,7 +6,6 @@ import server.exception.ReportAlreadyExistsException;
 import server.exception.ReportNotFoundException;
 import server.report.entity.ReportData;
 import server.report.repo.ReportDataRepository;
-import server.user.entity.AppUser;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,8 +16,8 @@ public class ReportDataService {
 
     private final ReportDataRepository repository;
 
-    public List<ReportData> getAllReportsOfUser(AppUser user) {
-        return repository.findAllByAuthorId(user.getId());
+    public List<ReportData> getAllReportsOfUser(Long id) {
+        return repository.findAllByAuthorId(id);
     }
 
     public void addNewReport(ReportData report) throws ReportAlreadyExistsException {

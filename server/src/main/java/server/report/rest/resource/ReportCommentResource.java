@@ -2,6 +2,7 @@ package server.report.rest.resource;
 
 import lombok.Getter;
 import lombok.Setter;
+import server.user.rest.resource.AppUserResource;
 
 import java.time.LocalDateTime;
 
@@ -11,9 +12,11 @@ public class ReportCommentResource {
 
     private Long id;
 
-    private String commentingUser;
+    private AppUserResource commentingUser;
 
     private String comment;
 
     private LocalDateTime createdAt;
+
+    private ReportDataResource commentedReport;
 }

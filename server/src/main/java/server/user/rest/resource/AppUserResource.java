@@ -13,6 +13,8 @@ public class AppUserResource {
 
     private String organizationalUnit;
 
+    private String username;
+
     private String firstName;
 
     private String lastName;
