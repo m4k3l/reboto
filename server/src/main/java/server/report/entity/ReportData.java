@@ -11,8 +11,8 @@ import lombok.Getter;
 import lombok.Setter;
 import server.user.entity.AppUser;
 
-import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
@@ -50,7 +50,7 @@ public class ReportData {
 
     private String schoolText;
 
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 }

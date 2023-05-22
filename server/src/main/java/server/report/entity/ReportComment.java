@@ -7,6 +7,7 @@ import lombok.Setter;
 import server.user.entity.AppUser;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -33,5 +34,5 @@ public class ReportComment {
     private String comment;
 
     @NotNull
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 }
